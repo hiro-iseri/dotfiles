@@ -1,0 +1,9 @@
+"検索設定
+set wrapscan
+set ignorecase
+set incsearch
+set smartcase
+
+if &t_Co > 2 || has("gui_running")
+  set hlsearch
+endif
