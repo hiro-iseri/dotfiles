@@ -16,9 +16,10 @@ NeoBundle "Shougo/unite-outline"
 NeoBundle "t9md/vim-quickhl"
 NeoBundle 'git://github.com/tyru/caw.vim.git'
 NeoBundle 'git://github.com/Shougo/unite.vim.git'
+NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'git://github.com/Shougo/vimproc.git'
 "NeoBundle 'git://github.com/Shougo/vimshell.git'
-"NeoBundle 'git://github.com/thinca/vim-quickrun.git'
+NeoBundle 'git://github.com/thinca/vim-quickrun.git'
 "NeoBundle 'git://github.com/mattn/zencoding-vim.git'
 "NeoBundle 'git://github.com/altercation/vim-colors-solarized.git'
 "NeoBundle 'git://github.com/Lokaltog/vim-powerline.git'

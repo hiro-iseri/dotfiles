@@ -8,4 +8,4 @@ set notitle
 
 set showcmd
 set cmdheight=2
-
+set number

@@ -4,7 +4,6 @@ filetype off
 set nocompatible
 autocmd FileType * setlocal formatoptions-=ro
 set clipboard+=unnamed
-
 "インデント
 source ~/dotfiles/.vimrc.indent
 
@@ -48,10 +47,20 @@ xmap <Space>m <Plug>(quickhl-manual-this)
 nmap <Space>M <Plug>(quickhl-manual-reset)
 xmap <Space>M <Plug>(quickhl-manual-reset)
 
+nnoremap <silent> <C-f> :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+inoremap <silent> <C-f> <ESC>:<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> <C-b> :<C-u>Unite buffer<CR>
+inoremap <silent> <C-b> <ESC>:<C-u>Unite buffer<CR>
+nnoremap <silent> <C-y> :<C-u>Unite history/yank<CR>
+inoremap <silent> <C-y> <ESC>:<C-u>Unite history/yank<CR>
+
 "プラグイン関連
 let g:neocomplcache_enable_at_startup=1
 let g:neocomplcache_force_overwrite_completefunc=1
 let g:clang_complete_auto=1
+
+let g:unite_source_history_yank_enable=1
+let g:unite_enable_start_insert=1
 
 source ~/dotfiles/.vimrc.neobundle
 filetype plugin on
