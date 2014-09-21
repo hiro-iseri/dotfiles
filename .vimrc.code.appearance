@@ -1,0 +1,14 @@
+"コーディング時の表示設定
+
+"全角スペースを協調表示する
+if has("syntax")
+	function! ActivateInvisibleIndicator()
+		syntax match InvisibleJISX0208Space "　" display containedin=ALL
+		highlight InvisibleJISX0208Space term=underline ctermbg=Blue guifg=DarkGray gui=underline
+	endf
+
+	augroup invisible
+		autocmd! invisible
+		autocmd BufNew,BufRead * call ActivateInvisibleIndicator()
+	augroup END
+endif

@@ -1,4 +1,6 @@
 "neobundle setting
+filetype off
+
 if has('vim_starting')
   set runtimepath+=~/.vim/neobundle.vim.git
   call neobundle#rc(expand('~/.vim/.bundle/'))
@@ -30,4 +32,6 @@ NeoBundle 'git://github.com/thinca/vim-quickrun.git'
 "NeoBundle 'QuickBuf'
 "NeoBundle 'git://github.com/thinca/vim-ref.git'
 
+
+filetype plugin indent on
 
