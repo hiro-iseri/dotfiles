@@ -1,0 +1,11 @@
+caw.vim
+clang_complete
+neocomplcache
+neocomplcache-clang_complete
+neosnippet-snippets
+neosnippet.vim
+unite-outline
+unite.vim
+vim-fugitive
+vim-quickhl
+vim-quickrun

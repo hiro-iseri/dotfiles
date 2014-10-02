@@ -29,3 +29,17 @@ set number
 
 "折り返し有効
 set wrap
+
+"ファイルタイプをステータス行に表示
+function! GetStatusEx()
+	let str = ''
+	if &ft != ''
+		let str = str . '[' . &ft . ']'
+	endif
+"	if &ff != ''
+"		let str = str . '[' . &ff . ']'
+"	endif
+	return str
+endfunction
+set statusline=%<%f\ %m%r%h%w%=%{GetStatusEx()}\ \ %l,%c%V%8P
+

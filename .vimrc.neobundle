@@ -3,13 +3,15 @@ filetype off
 
 if has('vim_starting')
   set runtimepath+=~/.vim/neobundle.vim.git
-  call neobundle#rc(expand('~/.vim/.bundle/'))
+  call neobundle#rc(expand('~/.vim/bundle/'))
 endif
 
 "NeoBundle 'git://github.com/tpope/vim-surround.git'
 "NeoBundle 'git://github.com/tpope/vim-repeat.git'
 NeoBundle 'git://github.com/Shougo/neocomplcache.git'
 NeoBundle 'git://github.com/Shougo/neocomplcache-clang_complete.git'
+NeoBundle "Shougo/neosnippet.vim"
+NeoBundle "Shougo/neosnippet-snippets"
 NeoBundle 'git://github.com/Rip-Rip/clang_complete.git'
 
 "NeoBundle 'git://github.com/Shougo/neocomplcache-snippets-complete.git'

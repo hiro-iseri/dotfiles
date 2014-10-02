@@ -1,3 +1,3 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/Users/iserihiroki/Workspace/DevWorkspace/main/devwork/cb2dots/test_src'
+let g:netrw_dirhist_1='/Users/iserihiroki/dotfiles/.vim/neobundle.vim'

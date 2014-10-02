@@ -19,9 +19,10 @@ source ~/dotfiles/.vimrc.move
 "エンコード
 source ~/dotfiles/.vimrc.encoding
 
+filetype on
 "体裁
 source ~/dotfiles/.vimrc.appearance
-autocmd FileType c,cpp source ~/dotfiles/.vimrc.code.appearance
+source ~/dotfiles/.vimrc.code.appearance
 
 "編集中でも他ファイルを開けるように
 set hidden
@@ -31,7 +32,7 @@ set nobackup
 set autoread
 set noswapfile
 
-filetype on
+
 "ファイルごとの設定
 function! s:cpp()
   "括弧を構成する設定に <> を追加する
@@ -42,6 +43,7 @@ augroup vimrc-cpp
 	autocmd!
 	autocmd FileType c,cpp call s:cpp()
 augroup END
+
 
 "キー設定
 "クリップボードからの貼付け
@@ -81,6 +83,24 @@ let g:neocomplcache_dictionary_filetype_lists = {
 
 let g:unite_source_history_yank_enable=1
 let g:unite_enable_start_insert=1
+
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+			\ "\<Plug>(neosnippet_expand_or_jump)"
+			\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+			\ "\<Plug>(neosnippet_expand_or_jump)"
+			\: "\<TAB>"
+
+" For snippet_complete marker.
+if has('conceal')
+	  set conceallevel=2 concealcursor=i
+endif
 
 filetype plugin on
 filetype indent on
